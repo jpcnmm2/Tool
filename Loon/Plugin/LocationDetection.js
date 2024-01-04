@@ -1,7 +1,7 @@
 /* 测试 api
- * 地理位置查询
+ * 节点信息查询
  * 感谢并修改自https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js
- * 脚本功能：检查节点是否支持Dazn/Discovery/Param/Disney/Netflix/ChatGPT/YouTube解锁服务
+ * 脚本功能：查询节点IP详细信息
  * 原作者：XIAO_KOP
 */
 
@@ -32,18 +32,21 @@ var requestParams = {
 }
 
 var message = ""
-const paras = ["query","as","org","isp","countryCode","city","lon","lat"];
-const paran = ["远端IP地址","远端IP ASN","ASN所属机构","远端ISP","远端IP地区","远端IP城市","远端经度","远端纬度"];
+//const paras = ["query","as","org","isp","countryCode","city","lon","lat"];
+const paras = ["query","as","org","isp","countryCode","city"];
+//const paran = ["远端IP地址","远端IP ASN","ASN所属机构","远端ISP","远端IP地区","远端IP城市","远端经度","远端纬度"];
+const paran = ["🗺️IP地址","#️⃣ASN","⛪ASN所属机构","🖥️ISP","🌍国家/地区","🏙城市"];
+
 
 $httpClient.get(requestParams, (error, response, data) => {
     if (error) {
         message = "</br></br>🔴 查询超时"
         message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`
-        $done({"title": "  地理位置查询", "htmlMessage": message});
+        $done({"title": "  🔎 查询结果", "htmlMessage": message});
     } else {
         console.log(data);
         message = data ? json2info(data, paras) : "";
-        $done({"title": "  地理位置查询", "htmlMessage": message});
+        $done({"title": "  🔎 查询结果", "htmlMessage": message});
     }
 })
 
