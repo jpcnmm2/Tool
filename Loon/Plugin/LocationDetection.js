@@ -7,7 +7,7 @@
 
 // $environment.params with input params
 console.log($environment.params);
-var url = "http://ip-api.com/json/";
+var url = "http://ip-api.com/json/?lang=zh-CN";
 
 /**
  * build 411 版本后 添加$environment.params.nodeInfo对象，表示简单的节点信息
