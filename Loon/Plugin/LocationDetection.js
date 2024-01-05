@@ -50,7 +50,7 @@ $httpClient.get(requestParams, (error, response, data) => {
     }
 })
 
-function ISP_ValidCheck(para) {
+ function ISP_ValidCheck(para) {
   if(para.indexOf("Oracle Cloud Infrastructure")>-1)
    {
    para = para.replace("Oracle Cloud Infrastructure","甲骨文云服务")
@@ -76,11 +76,14 @@ function ISP_ValidCheck(para) {
    else if(para=="Alibaba.com LLC"){
    return "阿里云服务" 
    }
-   else if(para=="Hong Kong Telecommunications (HKT) Limited"){
+   else if(para.indexOf("Hong Kong Telecommunications")>-1){
    return "香港电讯有限公司（HKT）" 
    }
+   else if(para.indexOf("PCCW IMS")>-1){
+   return "电讯盈科（PCCW）" 
+   }
    else if(para=="DigitalOcean, LLC"){
-   return "数字海洋" 
+   return "数字海洋（DigitalOcean）" 
    }
    else if(para.indexOf("AWS EC2 (us-west")>-1){
    return "亚马逊美西云服务" 
@@ -168,12 +171,6 @@ function ISP_ValidCheck(para) {
    }
    else if(para=="Alibaba.com LLC"){
    return "阿里云服务" 
-   }
-   else if(para=="Hong Kong Telecommunications (HKT) Limited"){
-   return "香港电讯有限公司（HKT）" 
-   }
-   else if(para=="DigitalOcean, LLC"){
-   return "数字海洋有限公司" 
    }
    else if(para=="AWS EC2 (us-west-2)"){
    return "亚马逊云服务" 
@@ -321,11 +318,11 @@ function ISP_ValidCheck(para) {
    else if(para=="Alibaba.com LLC"){
    return "阿里云服务" 
    }
-   else if(para=="Hong Kong Telecommunications (HKT) Limited"){
+   else if(para.indexOf("Hong Kong Telecommunications") >-1 ){
    return "香港电讯有限公司（HKT）" 
    }
    else if(para=="DigitalOcean, LLC"){
-   return "数字海洋" 
+   return "数字海洋（DigitalOcean）" 
    }
    else if(para.indexOf("AWS EC2 (us-west")>-1){
    return "亚马逊美西云服务" 
