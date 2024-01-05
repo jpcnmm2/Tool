@@ -35,7 +35,7 @@ var message = ""
 //const paras = ["query","as","org","isp","countryCode","city","lon","lat"];
 const paras = ["query","as","org","isp","countryCode","city"];
 //const paran = ["远端IP地址","远端IP ASN","ASN所属机构","远端ISP","远端IP地区","远端IP城市","远端经度","远端纬度"];
-const paran = ["🗺️IP地址","#️⃣ASN","⛪机构","🖥️商家","🌍国家/地区","🏙城市"];
+const paran = ["🗺️IP地址","#️⃣ASN","⛪机构","🖥️商家","🌍国家","🏙城市"];
 
 
 $httpClient.get(requestParams, (error, response, data) => {
