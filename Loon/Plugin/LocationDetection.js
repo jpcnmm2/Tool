@@ -424,7 +424,7 @@ function json2info(cnt, paras) {
         res = cnt[paras[i]] ? res + "</br><b>" + "<font  color=>" + paran[i] + "</font> : " + "</b>"+ "<font  color=>" + cnt[paras[i]] + "</font></br>" : res;
     }
     res = res + "-------------------------------" + "</br>" + "<font color=#6959CD>" + "<b>节点</b> ➟ " + $environment.params.node + "</font>";
-    res = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + res + `</p>`;
+    res = `<p style="text-align: left; font-family: -apple-system; font-size: large; font-weight: thin">` + res + `</p>`;
     return res;
 }
 
