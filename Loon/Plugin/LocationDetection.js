@@ -420,7 +420,7 @@ function json2info(cnt, paras) {
        } else if (paras[i] == "isp") {
          cnt[paras[i]] = ISP_ValidCheck(cnt['isp']);
        } else if (paras[i] == "org") {
-         cnt[paras[i]] = Org_ValidCheck(cnt['isp']);
+         cnt[paras[i]] = Org_ValidCheck(cnt['org']);
        } else {
          cnt[paras[i]] = cnt[paras[i]];
        }
