@@ -73,7 +73,7 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para=="Chunghwa Telecom Co. Ltd."){
    return "中华电信" 
    }
-   else if(para=="Alibaba.com LLC"){
+   else if(para.indexOf("Alibaba")>-1){
    return "阿里云服务" 
    }
    else if(para.indexOf("Hong Kong Telecommunications")>-1){
@@ -315,7 +315,7 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para=="Chunghwa Telecom Co. Ltd."){
    return "中华电信" 
    }
-   else if(para=="Alibaba.com LLC"){
+   else if(para.indexOf("Alibaba")>-1){
    return "阿里云服务" 
    }
    else if(para.indexOf("Hong Kong Telecommunications") >-1 ){
