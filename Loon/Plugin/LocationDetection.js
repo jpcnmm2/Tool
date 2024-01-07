@@ -56,18 +56,25 @@ $httpClient.get(requestParams, (error, response, data) => {
    para = para.replace("Oracle Cloud Infrastructure","甲骨文云服务")
    return para
    }
-   if(para=="Amazon.com, Inc."){
+   else if(para=="Oracle Corporation")   {
+   return "甲骨文云服务"
+   }
+   else if(para.indexOf("Oracle Public Cloud")>-1)   {
+   para = para.replace("Oracle Public Cloud","甲骨文云服务")
+   return para
+   }
+   if(para.indexOf("Amazon.com")>-1){
    return "亚马逊云服务" 
    }
-   if(para.indexOf("AWS")>-1){
-    para = para.replace("AWS","亚马逊云服务")
+   if(para.indexOf("AWS EC2")>-1){
+    para = para.replace("AWS EC2","亚马逊云服务")
     return para
    }
    if(para.indexOf("Microsoft Azure Cloud") >-1 ){
     para = para.replace("Microsoft Azure Cloud","微软云服务")
     return "微软云服务"
    } 
-   else if(para=="Microsoft Corporation"){
+   else if(para.indexOf("Microsoft Corporation") >-1 ){
    return "微软云服务" 
    }
    else if(para=="Chunghwa Telecom Co. Ltd."){
@@ -76,31 +83,28 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para.indexOf("Alibaba")>-1){
    return "阿里云服务" 
    }
+   else if(para=="ALICLOUD-HK")   {
+   return "香港阿里云"
+   }
+   else if(para.indexOf("Tencent")>-1)   {
+   return "腾讯云服务"
+   }
    else if(para.indexOf("Hong Kong Telecommunications")>-1){
    return "香港电讯有限公司（HKT）" 
    }
    else if(para.indexOf("PCCW IMS")>-1){
    return "电讯盈科（PCCW）" 
    }
+   else if(para=="Hong Kong Broadband Network Ltd")   {
+   return "香港宽频网络（HKBN）" 
+   }
    else if(para=="DigitalOcean, LLC"){
    return "数字海洋（DigitalOcean）" 
-   }
-   else if(para.indexOf("AWS EC2 (us-west")>-1){
-   return "亚马逊美西云服务" 
-   }
-   else if(para.indexOf("AWS EC2 (us-east")>-1){
-   return "亚马逊美东云服务" 
-   }
-   else if(para=="AWS EC2 (ap-northeast-2)"){
-   return "亚马逊东北亚云服务" 
-   }
-   else if(para=="AWS EC2 (ap-southeast-1)"){
-   return "亚马逊东南亚云服务"
    }
    else if(para=="Newmedia Express PTE LTD"){
    return "新媒体快递" 
    }
-   else if(para=="Taiwan Fixed Network CO., LTD.")   {
+   else if(para.indexOf("Taiwan Fixed Network") >-1 )   {
    return "台湾固网股份"
    }
    else if(para=="Hostigation")   {
@@ -110,23 +114,15 @@ $httpClient.get(requestParams, (error, response, data) => {
    return "中联在线网络科技" 
    }
    else if(para=="CodecCloud(HK)Limited"){
-   return "编码器云(香港)" 
+   return "编码器云CodecCloud(香港)" 
    }
    else if(para=="RESNET INC DBA of RESIDENTIAL NETWORKING SOLUTIONS LLC")   
    {
    return "RESNET住宅网络解决方案" 
    }
-   else if(para=="Hong Kong Broadband Network Ltd")   {
-   return "香港宽频网络（HKBN）" 
-   }
-   else if(para=="ALICLOUD-HK")   {
-   return "香港阿里云"
-   }
-   else if(para.indexOf("Tencent")>-1)   {
-   return "腾讯云服务"
-   }
+
    else if(para=="HGC Global Communications Limited")   {
-   return "和记环球电讯"
+   return "和记环球电讯（HGC）"
    }
    else if(para=="Eons Data Communications Limited")   {
    return "Eons数据通讯"
@@ -146,65 +142,20 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para=="Quicksilver Express Courier, Inc.")   {
    return "快银快递"
    }
-   else if(para=="Oracle Corporation")   {
-   return "甲骨文云服务"
-   }
-   else if(para.indexOf("Oracle Public Cloud")>-1)   {
-   para = para.replace("Oracle Public Cloud","甲骨文云服务")
-   return para
-   }
    else if(para.indexOf("Networks Limited")>-1){
     para = para.replace("Networks Limited","网络技术有限公司")
     return para
    }
    else if(para.indexOf("Root Technologies")>-1){
     return "Root Networks"
-   }
-   else if(para=="Microsoft Azure Cloud (eastasia)"){
-   return "微软云服务"
-   }
-   else if(para=="Microsoft Corporation"){
-   return "微软云服务" 
-   }
-   else if(para=="Chunghwa Telecom Co. Ltd."){
-   return "中华电信" 
-   }
-   else if(para=="Alibaba.com LLC"){
-   return "阿里云服务" 
-   }
-   else if(para=="AWS EC2 (us-west-2)"){
-   return "亚马逊云服务" 
-   }
-   else if(para=="Newmedia Express PTE LTD"){
-   return "新媒体快递有限公司" 
-   }
-   else if(para=="Taiwan Fixed Network")   {
-   return "台湾固网股份有限公司" 
-   }
-   else if(para=="Eons Data Communications Limited")   {
-   return "Eons数据通讯"
-   }
-   else if(para.indexOf("UCLOUD INFORMATION TECHNOLOGY") > -1 )   {
-   return "UCloud信息科技"
-   }
-   else if(para.indexOf("Virtual Machine Solutions LLC") > -1 )   {
-   return "VirMach"
-   }
-   else if(para.indexOf("Hytron Network Services Limited") > -1 )   {
-   return "Hytron网络服务"
-   }
-   
+   }   
    else if(para.indexOf("Globaldata Investments Inc") > -1 )   {
    return "Globaldata"
-   }
-   else if (para=="Oracle Corporation")   {
-   return "甲骨文公司" 
    }
    else if(para=="LoadEdge Limited")   {
    return "LoadEdge" 
    }
-   else
-   {
+   else {
    return para
    }
  }
@@ -301,8 +252,15 @@ $httpClient.get(requestParams, (error, response, data) => {
    para = para.replace("Oracle Cloud Infrastructure","甲骨文云服务")
    return para
    }
-   if(para.indexOf("AWS")>-1){
-    para = para.replace("AWS","亚马逊云服务")
+   else if(para=="Oracle Corporation")   {
+   return "甲骨文云服务"
+   }
+   else if(para.indexOf("Oracle Public Cloud")>-1)   {
+   para = para.replace("Oracle Public Cloud","甲骨文云服务")
+   return para
+   }
+   if(para.indexOf("AWS EC2")>-1){
+    para = para.replace("AWS EC2","亚马逊云服务")
     return para
    }
    if(para.indexOf("Microsoft Azure Cloud") >-1 ){
@@ -318,28 +276,22 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para.indexOf("Alibaba")>-1){
    return "阿里云服务" 
    }
+   else if(para=="ALICLOUD-HK")   {
+   return "香港阿里云"
+   }
+   else if(para.indexOf("Tencent")>-1)   {
+   return "腾讯云服务"
+   }
    else if(para.indexOf("Hong Kong Telecommunications") >-1 ){
    return "香港电讯有限公司（HKT）" 
    }
    else if(para=="DigitalOcean, LLC"){
    return "数字海洋（DigitalOcean）" 
    }
-   else if(para.indexOf("AWS EC2 (us-west")>-1){
-   return "亚马逊美西云服务" 
-   }
-   else if(para.indexOf("AWS EC2 (us-east")>-1){
-   return "亚马逊美东云服务" 
-   }
-   else if(para=="AWS EC2 (ap-northeast-2)"){
-   return "亚马逊东北亚云服务" 
-   }
-   else if(para=="AWS EC2 (ap-southeast-1)"){
-   return "亚马逊东南亚云服务"
-   }
    else if(para=="Newmedia Express PTE LTD"){
    return "新媒体快递" 
    }
-   else if(para=="Taiwan Fixed Network CO., LTD.")   {
+   else if(para.indexOf("Taiwan Fixed Network") >-1 )   {
    return "台湾固网股份"
    }
    else if(para=="Hostigation")   {
@@ -349,7 +301,7 @@ $httpClient.get(requestParams, (error, response, data) => {
    return "中联在线网络科技" 
    }
    else if(para=="CodecCloud(HK)Limited"){
-   return "编码器云(香港)" 
+   return "编码器云CodecCloud(香港)" 
    }
    else if(para=="RESNET INC DBA of RESIDENTIAL NETWORKING SOLUTIONS LLC")   
    {
@@ -358,14 +310,8 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para=="Hong Kong Broadband Network Ltd")   {
    return "香港宽频网络（HKBN）" 
    }
-   else if(para=="ALICLOUD-HK")   {
-   return "香港阿里云"
-   }
-   else if(para.indexOf("Tencent")>-1)   {
-   return "腾讯云服务"
-   }
    else if(para=="HGC Global Communications Limited")   {
-   return "和记环球电讯"
+   return "和记环球电讯(HGC)"
    }
    else if(para=="Eons Data Communications Limited")   {
    return "Eons数据通讯"
@@ -385,13 +331,6 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para=="Quicksilver Express Courier, Inc.")   {
    return "快银快递"
    }
-   else if(para=="Oracle Corporation")   {
-   return "甲骨文云服务"
-   }
-   else if(para.indexOf("Oracle Public Cloud")>-1)   {
-   para = para.replace("Oracle Public Cloud","甲骨文云服务")
-   return para
-   }
    else if(para.indexOf("Networks Limited")>-1){
     para = para.replace("Networks Limited","网络技术有限公司")
     return para
@@ -399,8 +338,7 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para.indexOf("Root Technologies")>-1){
     return "Root Networks"
    }
-   else
-   {
+   else {
    return para
    }
  }
