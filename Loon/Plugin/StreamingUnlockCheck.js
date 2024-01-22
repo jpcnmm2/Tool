@@ -2,7 +2,7 @@
 作者: @mcdasheng
 脚本功能: 流媒体解锁查询
 [Script]
-  generic script-path=https://raw.githubusercontent.com/jpcnmm2/Tool/main/Loon/Plugin/StreamingUnlockCheck.js, tag=流媒体解锁查询, img-url=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Icons/AppleTV.png
+  generic script-path=https://raw.githubusercontent.com/jpcnmm2/Tool/master/Loon/Plugin/StreamingUnlockCheck.js, tag=流媒体解锁查询, img-url=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Icons/AppleTV.png
 @params
   "ipinfo_token": https://ipinfo.io 官网自行申请 
 @thanks
