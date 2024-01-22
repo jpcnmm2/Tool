@@ -30,7 +30,7 @@ $.token = $.getdata("ipinfo_token") ? $.getdata("ipinfo_token") : "";
       res +
       "</br><b>" +
       "<font  color=>" +
-      "📺YouTube Premium" +
+      "📺YouTube" +
       "</font> : " +
       "</b>" +
       "<font  color=>" +
@@ -76,14 +76,14 @@ $.token = $.getdata("ipinfo_token") ? $.getdata("ipinfo_token") : "";
       `</br><font color=#6959CD><b>节点</b> ➟ ${$environment.params.node} </font>`;
 
     res =
-      `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` +
+      `<p style="text-align: left; font-family: -apple-system; font-size: large; font-weight: thin">` +
       res +
       `</p>`;
 
     msg = res;
 
     $done({
-      title: "         流媒体查询结果",
+      title: "     🎥流媒体查询结果",
       htmlMessage: msg,
     });
 
@@ -169,10 +169,10 @@ async function ChatGPT_Test() {
 
       message = res;
 
-      // $done({
-      //   title: "      ChatGPT 查询结果",
-      //   htmlMessage: message,
-      // });
+      $done({
+        title: "      ChatGPT 查询结果",
+        htmlMessage: message,
+      });
     },
     (reason) => {
       $.log("🔴ChatGPT test error");
