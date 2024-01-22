@@ -169,10 +169,10 @@ async function ChatGPT_Test() {
 
       message = res;
 
-      $done({
-        title: "      ChatGPT 查询结果",
-        htmlMessage: message,
-      });
+      // $done({
+      //   title: "      ChatGPT 查询结果",
+      //   htmlMessage: message,
+      // });
     },
     (reason) => {
       $.log("🔴ChatGPT test error");
