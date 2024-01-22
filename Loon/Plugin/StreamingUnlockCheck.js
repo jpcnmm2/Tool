@@ -25,7 +25,7 @@ $.token = $.getdata("ipinfo_token") ? $.getdata("ipinfo_token") : "";
 })()
   .catch((e) => $.logErr(e))
   .finally(async () => {
-    var res = "------------------------------";
+    var res = "----------------------------------";
     res =
       res +
       "</br><b>" +
@@ -72,7 +72,7 @@ $.token = $.getdata("ipinfo_token") ? $.getdata("ipinfo_token") : "";
 
     res =
       res +
-      "------------------------------" +
+      "----------------------------------" +
       `</br><font color=#6959CD><b>节点</b> ➟ ${$environment.params.node} </font>`;
 
     res =
@@ -83,7 +83,7 @@ $.token = $.getdata("ipinfo_token") ? $.getdata("ipinfo_token") : "";
     msg = res;
 
     $done({
-      title: "     🎥流媒体查询结果",
+      title: "    流媒体查询结果",
       htmlMessage: msg,
     });
 
