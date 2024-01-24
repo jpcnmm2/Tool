@@ -221,7 +221,7 @@ async function YouTube_Test() {
       "Accept-Encoding": "gzip, deflate, br",
     },
     node: $environment.params.node,
-    timeout: 5000,
+    timeout: 8000,
   };
 
   return $.http.get(options).then(
