@@ -83,7 +83,7 @@ $.token = $.getdata("ipinfo_token") ? $.getdata("ipinfo_token") : "";
     msg = res;
 
     $done({
-      title: "    流媒体查询结果",
+      title: "   流媒体查询结果",
       htmlMessage: msg,
     });
 
@@ -193,7 +193,7 @@ async function Spotify_Test() {
     },
     node: $environment.params.node,
     body: "birth_day=11&birth_month=11&birth_year=2000&collect_personal_info=undefined&creation_flow=&creation_point=https%3A%2F%2Fwww.spotify.com%2Fhk-en%2F&displayname=Gay%20Lord&gender=male&iagree=1&key=a1e486e2729f46d6bb368d6b2bcda326&platform=www&referrer=&send-email=0&thirdpartyemail=0&identifier_token=AgE6YTvEzkReHNfJpO114514",
-    timeout: 20000,
+    timeout: 5000,
   };
 
   return $.http.post(options).then((resp) => {
@@ -221,7 +221,7 @@ async function YouTube_Test() {
       "Accept-Encoding": "gzip, deflate, br",
     },
     node: $environment.params.node,
-    timeout: 8000,
+    timeout: 5000,
   };
 
   return $.http.get(options).then(
