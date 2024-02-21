@@ -77,7 +77,7 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para.indexOf("Microsoft Corporation") >-1 ){
    return "微软云服务" 
    }
-   else if(para=="Chunghwa Telecom Co. Ltd."){
+   else if(para.indexOf("Chunghwa Telecom") >-1){
    return "中华电信" 
    }
    else if(para.indexOf("Alibaba")>-1){
@@ -270,7 +270,7 @@ $httpClient.get(requestParams, (error, response, data) => {
    else if(para=="Microsoft Corporation"){
    return "微软云服务" 
    }
-   else if(para=="Chunghwa Telecom Co. Ltd."){
+   else if(para.indexOf("Chunghwa Telecom") >-1){
    return "中华电信" 
    }
    else if(para.indexOf("Alibaba")>-1){
