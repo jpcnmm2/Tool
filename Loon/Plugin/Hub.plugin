@@ -13,7 +13,7 @@
 # 转为Stash
 ^https:\/\/(.*git.*)\/(.*\.)(js|conf|snippet|plugin|list).*($persistentStore.read(STASH_SUFFIX))$ 302 http://script.hub/file/_start_/https://$1/$2$3/_end_/$2.sgmodule?type=qx-rewrite&target=stash-stoverride&del=true
 # 转为Loon
-^https:\/\/(.*git.*)\/(.*\.)(js|conf|snippet|plugin|list).*loon$ 302 http://script.hub/file/_start_/https://$1/$2$3/_end_/$2.sgmodule?type=loon-plugin&target=loon-plugin&del=true
+^https:\/\/(.*git.*)\/(.*\.)(js|conf|snippet|plugin|list).*loon$ 302 https://www.nsloon.com/openloon/import?plugin=http://script.hub/file/_start_/https://$1/$2$3/_end_/$2.sgmodule?type=loon-plugin&target=loon-plugin&del=true
 
 [mitm]
 hostname = raw.githubusercontent.com
