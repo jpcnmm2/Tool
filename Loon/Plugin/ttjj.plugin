@@ -1,0 +1,16 @@
+#!name = 天天基金去开屏
+#!author = 007
+#!homepage = https://github.com/jpcnmm2/Tool/tree/master/Loon/Plugin
+#!icon = https://raw.githubusercontent.com/jpcnmm2/Tool/master/Loon/Plugin/ttjj.png
+#!desc=去除天天基金APP开屏广告
+
+[rule]
+DOMAIN, ttdns.tiantianfunds.com, REJECT
+DOMAIN, ttdns.1234567.com.cn, REJECT
+DOMAIN, ttdns.95021.com, REJECT
+
+[rewrite]
+^https:\/\/appactive\.1234567\.com\.cn\/AppoperationApi\/OperationService\/GetAppStartImg reject-dict
+
+[mitm]
+hostname = appactive.1234567.com.cn
