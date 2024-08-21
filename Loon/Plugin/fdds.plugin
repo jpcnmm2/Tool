@@ -1,0 +1,14 @@
+#!name = 樊登读书解锁
+#!author = 007
+#!homepage = https://github.com/jpcnmm2/Tool/tree/master/Loon/Plugin
+#!icon = https://raw.githubusercontent.com/jpcnmm2/Tool/master/Loon/Plugin/fdds.png
+#!desc= 解锁付费课程、樊登讲书、电子书、有声书。
+
+[rule]
+
+[rewrite]
+http-response ^https?:\/\/.+dushu365.com\/(sns-orchestration-system\/homePage\/api\/v100\/myPage|smart-orch\/program|smart-orch\/course\/v100\/info|innovation-orchestration\/api\/ebook\/v100\/ebookInfo) script-path= https://raw.githubusercontent.com/WeiGiegie/666/main/fdds.js,requires-body = true,timeout = 10,binary-body-mode = false,enable=true
+http-request ^https?:\/\/.+dushu365.com\/resource-orchestration-system\/book\/v101\/content script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/fdtk.js,requires-body = true,timeout = 10,binary-body-mode = false,enable=true
+
+[mitm]
+hostname = *.dushu365.com,gw2.dushu365.com,gw1.dushu365.com
