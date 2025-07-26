@@ -3,9 +3,6 @@
 #!author = 丫丫
 #!homepage = https://github.com/jpcnmm2/Tool/tree/master/Loon/Plugin
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Loop.png
-#!input = LOON_SUFFIX,,tag=参数1的标题,desc=这是一个输入参数的说明
-#!input = SURGE_SUFFIX
-#!input = STASH_SUFFIX
 #!tag = 增强
 
 [Argument]
