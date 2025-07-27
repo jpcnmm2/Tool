@@ -11,7 +11,7 @@
 
 [rewrite]
 # Loon 转换
-^https:\/\/(.*\.(git|github|gitlab|gitee|gitcode).*)\/(.*\.)(js|conf|snippet|plugin|list|yaml|lpx|sgmodule).*($persistentStore.read(LOON_SUFFIX))$ 302 https://www.nsloon.com/openloon/import?plugin=http://script.hub/file/_start_/https://$1/$3$4/_end_/$3.sgmodule?type=loon-plugin&target=loon-plugin&del=true&jqEnabled=$persistentStore.read(JQ_ENABLED)
+^https:\/\/(.*\.(git|github|gitlab|gitee|gitcode).*)\/(.*\.)(js|conf|snippet|plugin|list|yaml|lpx|sgmodule).*ln$ 302 https://www.nsloon.com/openloon/import?plugin=http://script.hub/file/_start_/https://$1/$3$4/_end_/$3.sgmodule?type=loon-plugin&target=loon-plugin&del=true&jqEnabled=$persistentStore.read(JQ_ENABLED)
 # Surge 转换
 ^https:\/\/((?:[a-zA-Z0-9.-]*(?:git|github|gitlab|gitee|gitcode)[a-zA-Z0-9.-]*))\/(.*)\/(.*\.(?:js|conf|snippet|plugin|list|yaml|lpx|sgmodule)).*($persistentStore.read(SURGE_SUFFIX))$ 302 http://script.hub/file/_start_/https://$1/$3$4/_end_/$3.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=$persistentStore.read(JQ_ENABLED)
 # Stash 转换
