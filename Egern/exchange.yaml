@@ -1,0 +1,18 @@
+name: 解析转换
+description: 快速添加通用链接给Egern安装使用,依赖Script.hub; \n⓵ 模块依赖于https://script.hub环境运行,需提前配置\n⓶ 模块限Egern使用,Loon或Stash需自行修改格式使用
+author: 原作者@iKeLee
+
+url_rewrites:
+  - match: ^https:\/\/((?:[a-zA-Z0-9.-]*(?:git|github|gitlab|gitee|gitcode)[a-zA-Z0-9.-]*))\/(.*)\/(.*\.(?:js|conf|snippet|plugin|list|yaml|lpx|sgmodule)).*eg
+    location: egern:///modules/new?url=http://script.hub/file/_start_/https://$1/$2/$3/_end_/$3.sgmodule?type=surge-module&target=surge-module&del=true&jqEnabled=true
+    status_code: 307
+mitm:
+  hostnames:
+    includes:
+    - raw.githubusercontent.com
+    - gist.github.com
+    - gist.githubusercontent.com
+    - gitlab.com
+    - gitee.com
+    - gitcode.net
+    - github.com
