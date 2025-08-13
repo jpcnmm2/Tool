@@ -3,7 +3,7 @@ description: 支持在sooyaaabo的Egern库直接点击模块raw链接给Egern安
 author: 原作者@jpcnmm
 
 url_rewrites:
-  - match: ^https:\/\github\.com\/sooyaaabo\/Egern\/raw\/(.*)\/(.*\.(?:module))
+  - match: ^https:\/\/github\.com\/sooyaaabo\/Egern\/raw\/(.*)\/(.*\.(?:module))
     location: egern:///modules/new?url=https://raw.githubusercontent.com/sooyaaabo/Egern/$1/$2
     status_code: 307
 mitm:
