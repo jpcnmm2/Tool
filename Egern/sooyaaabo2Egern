@@ -1,0 +1,12 @@
+name: sooyaaabo模块2Egern
+description: 支持在sooyaaabo的Egern库直接点击模块raw链接给Egern安装使用
+author: 原作者@jpcnmm
+
+url_rewrites:
+  - match: ^https:\/\/raw\.githubusercontent\.com\/sooyaaabo\/Egern\/(.*)\/(.*\.(?:module))
+    location: egern:///modules/new?url=https://raw.githubusercontent.com/sooyaaabo/Egern/$1/$2
+    status_code: 307
+mitm:
+  hostnames:
+    includes:
+    - raw.githubusercontent.com
