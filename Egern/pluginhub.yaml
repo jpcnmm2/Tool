@@ -9,4 +9,5 @@ body_rewrites:
 mitm:
   hostnames:
     includes:
+    - hub.kelee.one
     - pluginhub.kelee.one
