@@ -102,6 +102,7 @@ const request$1 = async (request = {} || "", option = {}) => {
     delete request.headers?.["Content-Length"],
     delete request.headers?.["content-length"];
   const method = request.method.toLocaleLowerCase();
+  console.log("脚本运行环境为："+getEnv());
   switch (getEnv()) {
     case "Loon":
     case "Surge":
