@@ -1924,7 +1924,8 @@ function getDataSource(o) {
       }
     );
   await getKeyCode(),
-    (bizrt?.token && bizrt?.userInfo) || (await doLogin()),
+//    (bizrt?.token && bizrt?.userInfo) || (await doLogin()),
+    await doLogin(),
     await getAuthcode(),
     await getAccessToken(),
     await getBindInfo();
