@@ -1,5 +1,5 @@
-name: Surge模块2Egern
-description: 支持在LoonKissSurge网页直接点击Surge图标给Egern安装使用; 非Loon用户切勿反馈插件任何问题，尊重原创
+name: 模块一键导入
+description: 1.自动将surge.qingr.moe 网站中的Surge模块导入链接替换为 Egern 导入链接，实现点击一键安装。网址https://surge.qingr.moe/
 author: 原作者@iKeLee
 body_rewrites:
 - response_regex:
