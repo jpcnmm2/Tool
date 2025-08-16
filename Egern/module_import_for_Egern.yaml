@@ -1,6 +1,6 @@
 name: 模块一键导入
 description: 1.自动将surge.qingr.moe 网站中的Surge模块导入链接替换为 Egern 导入链接，实现点击一键安装。网址https://surge.qingr.moe/\n2.支持可莉插件中心的插件一键导入给Egern使用;; 使用前请先添加ScriptHub模块. 插件中心网址 https://hub.kelee.one\n3.支持在sooyaaabo的Egern库直接点击模块raw链接给Egern安装使用
-author: @jpcnmm、原作者@iKeLee
+author: jpcnmm、可莉
 body_rewrites:
 - response_regex:
     match: ^https:\/\/surge\.qingr\.moe
