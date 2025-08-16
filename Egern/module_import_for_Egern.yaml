@@ -11,9 +11,9 @@ body_rewrites:
     find: loon://import\?plugin=(https://kelee.one/Tool/Loon/Lpx/(.+)\.lpx)
     replace: egern:///modules/new?name=$2&url=http://script.hub/file/_start_/$1/_end_/$2.sgmodule%3Ftype%3Dloon-plugin%26target%3Dsurge-module%26del%3Dtrue%26jqEnabled%3Dtrue%26pm%3D.%26sni%3D.
 url_rewrites:
-  - match: ^https:\/\/github\.com\/sooyaaabo\/Egern\/raw\/(.*)\/(.*\.(?:module))
-    location: egern:///modules/new?url=https://raw.githubusercontent.com/sooyaaabo/Egern/$1/$2
-    status_code: 307
+- match: ^https:\/\/github\.com\/sooyaaabo\/Egern\/raw\/(.*)\/(.*\.(?:module))
+  location: egern:///modules/new?url=https://raw.githubusercontent.com/sooyaaabo/Egern/$1/$2
+  status_code: 307
 mitm:
   hostnames:
     includes:
