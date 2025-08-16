@@ -1,0 +1,12 @@
+name: surge.qingr模块一键导入
+description: 自动将surge.qingr.moe 网站中的Surge模块导入链接替换为 Egern 导入链接，实现点击一键安装。网址https://surge.qingr.moe/
+author: jpcnmm
+body_rewrites:
+- response_regex:
+    match: ^https:\/\/surge\.qingr\.moe
+    find: href="surge:///install-module\?url=
+    replace: href="egern:///modules/new?url=
+mitm:
+  hostnames:
+    includes:
+    - surge.qingr.moe
