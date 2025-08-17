@@ -1,6 +1,6 @@
-name: ⚡ 网上国网更新数据接口
-description: 网上国网更新数据接口
-author: 脑瓜
+name: ⚡ 网上国网电费查询
+description: 用于网上国网数据接口更新，借用 @Yuheng0101 大佬脚本更改，调整了接口返回的内容，增加去年的用电量
+author: 脑瓜|小白脸|𝐎𝐍𝐙𝟑𝐕
 scriptings:
 - http_request:
     name: 接口重写
