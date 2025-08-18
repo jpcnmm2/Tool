@@ -6,11 +6,11 @@
 #!tag = 增强
 
 [rewrite]
-^https://kelee\.one header-replace User-Agent StashCore/2.7.1\x20Stash/2.7.1\x20Clash/1.11.0
+^https://kelee\.one/Tool/Loon header-replace User-Agent StashCore/2.7.1\x20Stash/2.7.1\x20Clash/1.11.0
 
-^https://kelee\.one response-header-add Content-Disposition inline
+^https://kelee\.one/Tool/Loon response-header-add Content-Disposition inline
 
-^https://kelee\.one response-header-replace Content-Type text/plain;charset=utf-8
+^https://kelee\.one/Tool/Loon response-header-replace Content-Type text/plain;charset=utf-8
 
 [mitm]
 hostname = kelee.one
