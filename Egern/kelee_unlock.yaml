@@ -4,17 +4,17 @@ author: yaowuliu
 
 header_rewrites:
   - replace:
-      match: https://kelee\.one
+      match: https://kelee\.one/Tool/Loon
       name: User-Agent
       value: StashCore/2.7.1 Stash/2.7.1 Clash/1.11.0
       type: request
   - add:
-      match: https://kelee\.one
+      match: https://kelee\.one/Tool/Loon
       name: Content-Disposition
       value: inline
       type: response
   - replace:
-      match: https://kelee\.one
+      match: https://kelee\.one/Tool/Loon
       name: Content-Type
       value: text/plain;charset=utf-8
       type: response
