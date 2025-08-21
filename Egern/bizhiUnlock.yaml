@@ -1,0 +1,13 @@
+name: 壁纸应用解锁
+description: 壁纸应用解锁，打开后可能影响商店访问；https://apps.apple.com/us/app/%E5%A3%81%E7%BA%B8-%E7%B2%BE%E9%80%89%E9%AB%98%E6%B8%85%E5%A2%99%E7%BA%B8%E5%9B%BE%E7%89%87%E5%92%8C%E8%83%8C%E6%99%AF%E4%B8%BB%E9%A2%98/id953753168?l=zh-Hans-CN
+scriptings:
+- http_response:
+    name: bizhi
+    match: ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt
+    script_url: https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/bizhi.js
+    timeout: 60
+    body_required: true
+mitm:
+  hostnames:
+    includes:
+    - buy.itunes.apple.com
