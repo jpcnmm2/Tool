@@ -1,0 +1,59 @@
+name: 菜鸟去广告-墨鱼🦑
+description: 过滤菜鸟APP和小程序广告
+icon: https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Cainiao.png
+map_locals:
+- match: ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(?!.*_home)
+  status_code: 200
+  body: ' '
+- match: ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbcps\.presentation\.fetch\.cn
+  status_code: 200
+  body: ' '
+- match: ^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.
+  status_code: 200
+  body: ' '
+- match: ^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.alimama\.abyss\.unionpage\.get
+  status_code: 200
+  body: ' '
+- match: ^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad
+  status_code: 200
+  body: ' '
+- match: ^https?:\/\/[a-zA-Z0-9_.-]+\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge
+  status_code: 200
+  body: ' '
+scriptings:
+- http_response:
+    name: amdc
+    match: ^http:\/\/amdc\.m\.taobao\.com
+    script_url: https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amdc.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: cainiao_json
+    match: ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.app\.e2e\.engine\.page\.fetch
+    script_url: https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: cainiao_json
+    match: ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn
+    script_url: https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: cainiao_json
+    match: ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn
+    script_url: https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js
+    timeout: 60
+    body_required: true
+- http_response:
+    name: cainiao_json
+    match: ^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword
+    script_url: https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/cainiao_json.js
+    timeout: 60
+    body_required: true
+mitm:
+  hostnames:
+    includes:
+    - '*.cainiao.com'
+    - guide-acs.m.taobao.com
+    - acs4miniapp-inner.m.taobao.com
