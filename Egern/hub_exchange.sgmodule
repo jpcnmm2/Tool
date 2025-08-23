@@ -9,9 +9,9 @@
 
 [URL Rewrite]
 # Egern 转换
-^https:\/\/((?:[a-zA-Z0-9.-]*(?:git|github|gitlab|gitee|gitcode)[a-zA-Z0-9.-]*|{{{DOMAIN_REGEX}}}))\/(.*)\/(.*)\.(js|conf|snippet|plugin|list|yaml|lpx|sgmodule).*{{{Loon2Egern_SUFFIX}}}$ egern:///modules/new?url=http://script.hub/file/_start_/https://$1/$2/$3.$4/_end_/$3.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled={{{JQ_ENABLED}}} 302
+^https:\/\/((?:[a-zA-Z0-9.-]*(?:git|github|gitlab|gitee|gitcode)[a-zA-Z0-9.-]*|{{{DOMAIN_REGEX}}}))\/(.*)\/(.*)\.(js|conf|snippet|plugin|list|yaml|lpx|sgmodule).*{{{Loon2Egern_SUFFIX}}}$ egern:///modules/new?url=http://script.hub/file/_start_/https://$1/$2/$3.$4/_end_/$3.sgmodule?type=loon-plugin%26target=surge-module%26del=true%26jqEnabled={{{JQ_ENABLED}}} 302
 
-^https:\/\/((?:[a-zA-Z0-9.-]*(?:git|github|gitlab|gitee|gitcode)[a-zA-Z0-9.-]*|{{{DOMAIN_REGEX}}}))\/(.*)\/(.*)\.(js|conf|snippet|plugin|list|yaml|lpx|sgmodule).*{{{QuanX2Egern_SUFFIX}}}$ egern:///modules/new?url=http://script.hub/file/_start_/https://$1/$2/$3.$4/_end_/$3.sgmodule?type=qx-rewrite&target=surge-module&del=true&jqEnabled={{{JQ_ENABLED}}} 302
+^https:\/\/((?:[a-zA-Z0-9.-]*(?:git|github|gitlab|gitee|gitcode)[a-zA-Z0-9.-]*|{{{DOMAIN_REGEX}}}))\/(.*)\/(.*)\.(js|conf|snippet|plugin|list|yaml|lpx|sgmodule).*{{{QuanX2Egern_SUFFIX}}}$ egern:///modules/new?url=http://script.hub/file/_start_/https://$1/$2/$3.$4/_end_/$3.sgmodule?type=qx-rewrite%26target=surge-module%26del=true%26jqEnabled={{{JQ_ENABLED}}} 302
 
 # Surge 转换
 ^https:\/\/((?:[a-zA-Z0-9.-]*(?:git|github|gitlab|gitee|gitcode)[a-zA-Z0-9.-]*|{{{DOMAIN_REGEX}}}))\/(.*)\/(.*)\.(js|conf|snippet|plugin|list|yaml|lpx|sgmodule).*{{{Loon2Surge_SUFFIX}}}$ surge:///install-module?url=http://script.hub/file/_start_/https://$1/$2/$3.$4/_end_/$3.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled={{{JQ_ENABLED}}} 302
