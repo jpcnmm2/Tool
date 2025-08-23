@@ -1,5 +1,5 @@
 #!name=脚本模块快捷转换
-#!desc=快速添加通用链接给Egern安装使用,依赖Script.hub;  \n⓵ 模块依赖于https://script.hub环境运行,需提前配置\n⓶ 模块限Surge/Egern使用,Loon或Stash需自行修改格式使用
+#!desc=快速添加通用链接给Egern安装使用,依赖Script.hub
 #!arguments=Loon2Egern_SUFFIX:le,QuanX2Egern_SUFFIX:qe,Loon2Surge_SUFFIX:ls,QuanX2Surge_SUFFIX:qs,Surge2Loon_SUFFIX:sl,QuanX2Loon_SUFFIX:ql,STASH_SUFFIX:st,DOMAIN_HOST:kelee.one,DOMAIN_REGEX:kelee\.one,JQ_ENABLED:true
 #!arguments-desc=[参数设置]\n▪︎ Loon2Egern_SUFFIX: 自定义Loon转Egern的后缀参数\n▪︎ QuanX2Egern_SUFFIX: 自定义为QuanX转Egern的后缀参数\n▪︎ Loon2Surge_SUFFIX: 自定义为Loon转Surge的后缀参数\n▪︎ QuanX2Surge_SUFFIX: 自定义为QuanX转Surge的后缀参数\n▪︎ Surge2Loon_SUFFIX: 自定义Surge转Loon的后缀参数\n▪︎ QuanX2Loon_SUFFIX: 自定义为QuanX转Loon的后缀参数\n▪︎ STASH_SUFFIX: 自定义为Stash转换链接的后缀参数\n▪︎ DOMAIN_HOST: MITM的私有域名（多个用","分隔）\n▪︎ DOMAIN_REGEX: 正则匹配的私有域名（多个用"|"分隔）\n▪︎ JQ_ENABLED: 是否支持jq语法，(true启用/false关闭）\n\n[模块说明]\n⓵ 模块依赖于https://script.hub环境运行,需提前配置\n⓶ 模块限Surge/Egern使用,Loon或Stash需自行修改格式使用\n⓷ "SUFFIX"参数按需修改,"DOMAIN"参数按域名填写
 #!author=丫丫
