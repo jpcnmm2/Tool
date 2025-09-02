@@ -4,8 +4,8 @@
  * 优化：仅删冗余/空行/重复判断，不改任何函数结构
  *******************************
  [rewrite_local]
-^https?:\/\/(api.bilibili.com|api.biliapi.net)\/x\/share\/click url script-response-body https://raw.githubusercontent.com/yourname/yourrepo/main/blblplayurl.js
-^https?:\/\/.*bilivideo\.(com|cn)(?!.*\/resolve).*\/upgcxcode\/.*\.(m4s|flv|mp4|ts).+ url script-request-header https://raw.githubusercontent.com/yourname/yourrepo/main/blblplayurl.js
+^https?:\/\/(api.bilibili.com|api.biliapi.net)\/x\/share\/click url script-response-body https://raw.githubusercontent.com/jpcnmm2/Tool/refs/heads/master/scripts/blblplayurl.js
+^https?:\/\/.*bilivideo\.(com|cn)(?!.*\/resolve).*\/upgcxcode\/.*\.(m4s|flv|mp4|ts).+ url script-request-header https://raw.githubusercontent.com/jpcnmm2/Tool/refs/heads/master/scripts/blblplayurl.js
 
  [mitm]
  hostname = api.bilibili.com,api.biliapi.net,*.bilivideo.com,*.bilivideo.cn
