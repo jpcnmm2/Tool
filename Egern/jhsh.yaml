@@ -1,0 +1,11 @@
+name: 建行生活净化
+description: 建行生活净化
+author: '@能蟹仔'
+icon: https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1053.png
+scriptings:
+- http_response:
+    name: 建行生活净化
+    match: ^https?:\/\/yunbusiness\.ccb\.com\/(basic_service|clp_service)\/txCtrl\?txcode=A3341AB0(3|5|8)
+    script_url: https://raw.githubusercontent.com/androidcn/userscripts/main/jhsh.js
+    timeout: 20
+    body_required: true
