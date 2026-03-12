@@ -1,0 +1,11 @@
+name: "小组件"
+description: "所有小组件集合"
+scriptings:
+# 美股实时行情，支持多种 Widget 尺寸
+- generic:
+    name: 美股实时行情
+    script_url: https://raw.githubusercontent.com/jpcnmm2/Tool/master/Egern/widget_us_stock.js
+
+widgets:
+- name: 美股实时行情
+  script_name: 美股实时行情
