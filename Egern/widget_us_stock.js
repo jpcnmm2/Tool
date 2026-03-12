@@ -426,6 +426,12 @@ export default async function(ctx) {
     var resp = await ctx.http.get(API_URL);
     var data = await resp.json();
     var result = {};
+    
+    // 验证数据结构
+    if (!data || !data['chart'] || !data['chart']['result'] || !Array.isArray(data['chart']['result'])) {
+      console.log("Invalid data structure");
+      return errorWidget();
+    }
 
     // Extract stock data from response
     for (var i = 0; i < data['chart']['result'].length; i++) {
