@@ -1,7 +1,6 @@
 #!name=一点万象App签到
 #!desc=一点万象自动签到👅，积分可兑换礼品🎁，参数获取：我的、我的万象星、右上角签到点进去获取参数。
 #!icon=https://raw.githubusercontent.com/jpcnmm2/Tool/refs/heads/master/icon/mixc.png
-#!arguments-desc=[参数设置]\n▪︎ CronArg: 自定义定时签到时间参数
 #!homepage=https://github.com/jpcnmm2/Tool/tree/master/Egern
 #!tag=签到
 
