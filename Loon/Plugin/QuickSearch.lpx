@@ -1,0 +1,40 @@
+name: 快捷搜索
+description: 为Safari提供快速切换搜索引擎的能力，在插件列表中点击此插件上的链接查看使用方法。
+open_url: https://github.com/luestr/ProxyResource/blob/main/Resource/Markdown/QuickSearch/README.md
+author: 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+homepage: https://hub.kelee.one
+icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Safari.png
+dns: {}
+url_rewrites:
+- match: ^https:\/\/duckduckgo\.com\/\?q=bd\+([^&]+).+
+  location: https://www.baidu.com/s?wd=$1
+  status_code: 307
+- match: ^https:\/\/duckduckgo\.com\/\?q=bdimg\+([^&]+).+
+  location: https://image.baidu.com/search/index?tn=baiduimage&word=$1
+  status_code: 307
+- match: ^https:\/\/duckduckgo\.com\/\?q=gimg\+([^&]+).+
+  location: https://www.google.com/search?&tbm=isch&q=$1
+  status_code: 307
+- match: ^https:\/\/duckduckgo\.com\/\?q=b\+([^&]+).+
+  location: https://www.bing.com/search?q=$1
+  status_code: 307
+- match: ^https:\/\/duckduckgo\.com\/\?q=wk\+([^&]+).+
+  location: https://zh.wikipedia.org/wiki/$1
+  status_code: 307
+- match: ^https:\/\/duckduckgo\.com\/\?q=qm\+([^&]+).+
+  location: https://www.qimai.cn/search/index/country/cn/search/$1
+  status_code: 307
+- match: ^https:\/\/duckduckgo\.com\/\?q=gh\+([^&]+).+
+  location: https://github.com/search?q=$1
+  status_code: 307
+- match: ^https:\/\/duckduckgo\.com\/\?q=app\+([^&]+).+
+  location: https://apps.apple.com/cn/iphone/search?term=$1
+  status_code: 307 
+- match: ^https:\/\/duckduckgo\.com\/\?q=([^&]+).+
+  location: https://www.google.com/search?q=$1
+  status_code: 307
+mitm:
+  hostnames:
+    includes:
+    - duckduckgo.com
+ 
